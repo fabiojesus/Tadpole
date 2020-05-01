@@ -39,7 +39,11 @@ namespace Structures.Lists
 
         private void Add(ISingleLinkNode<T> node, ISingleLinkNode<T> next)
         {
-            if (FirstNode == null) FirstNode = node;
+            if (FirstNode == null)
+            {
+                FirstNode = node;
+                return;
+            }
             node.Next = next;
             if (next == FirstNode) FirstNode = node;
             else if (next == null) LastNode.Next = node;
