@@ -10,14 +10,26 @@ namespace App
     {
         static void Main(string[] args)
         {
-            var n1 = new DualLinkedNode<int>(3);
-            n1.Next = null;
+            var list = new DualLinkList<int>();
+            list.AddFirst(5);
+            list.AddFirst(4);
+            list.AddFirst(3);
+            list.AddFirst(2);
+            list.AddFirst(1);
+            MoveAndShow(list, false);
+            MoveAndShow(list, false);
+            MoveAndShow(list, false);
+            MoveAndShow(list, false);
+            MoveAndShow(list, true);
 
-            IDualLinkNode<int> current = n1;
-            while (true)
-            {
-                current = current.Next;
-            }
+        }
+
+
+        static void MoveAndShow(DualLinkList<int> lista, bool paraAfrente)
+        {
+            if (paraAfrente) lista.Next();
+            else lista.Previous();
+            Console.WriteLine(lista.Current);
         }
     }
 }

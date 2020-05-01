@@ -57,11 +57,20 @@ namespace Structures.Lists
             if (FirstNode == null)
             {
                 FirstNode = node;
+                _current = FirstNode;
                 return;
             }
             node.Next = next;
-            if (next == FirstNode) FirstNode = node;
-            else if (next == null) LastNode.Next = node;
+            if (next == FirstNode)
+            {
+                FirstNode.Previous = node;
+                FirstNode = node;
+            }
+            else if (next == null)
+            {
+                node.Previous = LastNode;
+                LastNode.Next = node;
+            }
         }
         #endregion
 
