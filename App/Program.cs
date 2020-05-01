@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Structures.Lists;
+using System;
+using System.Collections.Generic;
 
 namespace App
 {
@@ -6,6 +8,8 @@ namespace App
     {
         static void Main(string[] args)
         {
+            var a = new SingleLinkList<int>();
+            var b = new List<int>();
         }
     }
 }
