@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Structures.Nodes
 {
-    public class SingleLinkNode<T> : ISingleLinkNode<T>
+    public class SingleLinkNode<T>
     {
-        public T Content { get; set; }
 
-        public SingleLinkNode<T> Next { get; set; }
     }
 }

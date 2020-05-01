@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Structures.Interfaces
+﻿namespace Structures.Interfaces
 {
     public interface IDualSingleLinkNode<T> : INode<T>
     {
