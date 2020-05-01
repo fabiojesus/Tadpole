@@ -7,6 +7,11 @@ namespace Structures.Nodes
         public IDualLinkNode<T> Previous { get; set; }
         public IDualLinkNode<T> Next { get; set; }
         public T Content { get; set; }
+
+        public DualLinkedNode(T value)
+        {
+            Content = value;
+        }
     }
 }
 
