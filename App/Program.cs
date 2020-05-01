@@ -9,7 +9,7 @@ namespace App
         static void Main(string[] args)
         {
             var a = new SingleLinkList<int>();
-            var b = new List<int>();
+            a.
         }
     }
 }

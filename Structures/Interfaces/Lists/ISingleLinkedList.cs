@@ -8,5 +8,8 @@ namespace Structures.Interfaces.Lists
     {
         public void AddFirst(T value);
         public void AddLast(T value);
+
+        public T RemoveFirst();
+        public T RemoveLast();
     }
 }

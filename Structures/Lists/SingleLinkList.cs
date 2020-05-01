@@ -9,7 +9,9 @@ namespace Structures.Lists
 {
     public class SingleLinkList<T> : ISingleLinkedList<T>
     {
-        public ISingleLinkNode<T> FirstNode { get; set; }
+
+        #region Properties
+        private ISingleLinkNode<T> FirstNode { get; set; }
 
         private ISingleLinkNode<T> LastNode
         {
@@ -24,7 +26,9 @@ namespace Structures.Lists
                 return current;
             }
         }
+        #endregion
 
+        #region Add 
         public void AddFirst(T value)
         {
             var node = new SingleLinkNode<T>(value);
@@ -48,7 +52,43 @@ namespace Structures.Lists
             if (next == FirstNode) FirstNode = node;
             else if (next == null) LastNode.Next = node;
         }
+        #endregion
 
+        #region Remove 
+
+        public T RemoveFirst()
+        {
+            return Remove(FirstNode);
+        }
+
+        public T RemoveLast()
+        {
+            return Remove(LastNode);
+        }
+
+        private T Remove(ISingleLinkNode<T> node)
+        {
+            if(node == FirstNode)
+            {
+                var second = FirstNode.Next;
+                FirstNode = second;
+                return node.Content;
+            }
+            else if(node == LastNode)
+            {
+                var current = FirstNode;
+                while(current != LastNode)
+                {
+                    current = current.Next;
+                }
+                var tempData = current.Content;
+                current = null;
+                return tempData;
+            }
+            return default;
+        }
+
+        #endregion
 
     }
 }
