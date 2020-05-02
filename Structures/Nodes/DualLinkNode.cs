@@ -2,13 +2,13 @@
 
 namespace Structures.Nodes
 {
-    public class DualLinkedNode<T> : IDualLinkNode<T>
+    public class DualLinkNode<T> : IDualLinkNode<T>
     {
         public IDualLinkNode<T> Previous { get; set; }
         public IDualLinkNode<T> Next { get; set; }
         public T Content { get; set; }
 
-        public DualLinkedNode(T value)
+        public DualLinkNode(T value)
         {
             Content = value;
         }

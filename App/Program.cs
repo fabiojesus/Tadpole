@@ -3,6 +3,7 @@ using Structures.Lists;
 using Structures.Nodes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace App
 {
@@ -11,25 +12,20 @@ namespace App
         static void Main(string[] args)
         {
             var list = new DualLinkList<int>();
-            list.AddFirst(5);
-            list.AddFirst(4);
             list.AddFirst(3);
             list.AddFirst(2);
             list.AddFirst(1);
-            MoveAndShow(list, false);
-            MoveAndShow(list, false);
-            MoveAndShow(list, false);
-            MoveAndShow(list, false);
-            MoveAndShow(list, true);
-
+            list.AddLast(4);
+            list.AddLast(5);
+            list.AddLast(6);
+            var one = list.RemoveFirst();
+            var six = list.RemoveLast();
+            var two = list.RemoveFirst();
+            var five = list.RemoveLast();
+            var three = list.RemoveFirst();
+            var four = list.RemoveLast();
+            list.AddFirst(3);
         }
 
-
-        static void MoveAndShow(DualLinkList<int> lista, bool paraAfrente)
-        {
-            if (paraAfrente) lista.Next();
-            else lista.Previous();
-            Console.WriteLine(lista.Current);
-        }
     }
 }
