@@ -11,7 +11,7 @@ namespace App
     {
         static void Main(string[] args)
         {
-            var list = new DualLinkList<int>();
+            var list = new CircularLinkList<int>();
             list.AddFirst(3);
             list.AddFirst(2);
             list.AddFirst(1);
@@ -24,7 +24,7 @@ namespace App
             var five = list.RemoveLast();
             var three = list.RemoveFirst();
             var four = list.RemoveLast();
-            list.AddFirst(3);
+            list.AddLast(3);
         }
 
     }
