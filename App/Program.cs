@@ -41,17 +41,32 @@ namespace App
             //    lst.Add(stack.Pop());
             //}
 
-            var queue = new Structures.SpecialLists.Queue<int>();
-            queue.Enqueue(3);
-            queue.Enqueue(4);
-            queue.Enqueue(5);
-            queue.Enqueue(6);
+            //var queue = new Structures.SpecialLists.Queue<int>();
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);
+            //queue.Enqueue(5);
+            //queue.Enqueue(6);
+            //var lst = new List<int>();
+            //while (!queue.IsEmpty)
+            //{
+            //    Console.WriteLine(queue.Peek());
+            //    lst.Add(queue.Dequeue());
+            //}
+
+            var dequeue = new Structures.SpecialLists.Dequeue<int>();
+            dequeue.Push(4);
+            dequeue.Push(5);
+            dequeue.Push(6);
+            dequeue.Shift(3);
+            dequeue.Shift(2);
+            dequeue.Shift(1);
             var lst = new List<int>();
-            while (!queue.IsEmpty)
-            {
-                Console.WriteLine(queue.Peek());
-                lst.Add(queue.Dequeue());
-            }
+            lst.Add(dequeue.Unshift());
+            lst.Add(dequeue.Pop());
+            lst.Add(dequeue.Unshift());
+            lst.Add(dequeue.Pop());
+            lst.Add(dequeue.Unshift());
+            lst.Add(dequeue.Pop());
         }
 
     }
