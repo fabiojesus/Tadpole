@@ -2,6 +2,7 @@
 using Structures.Lists;
 using Structures.Nodes;
 using Structures.SpecialLists;
+using Structures.SpecialLists.A;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,18 +69,22 @@ namespace App
             //lst.Add(dequeue.Unshift());
             //lst.Add(dequeue.Pop());
 
-            var binaryTree = new BinaryTree(3);
-            binaryTree.AddRecursive(4);
-            binaryTree.AddRecursive(2);
-            binaryTree.AddRecursive(5);
-            binaryTree.AddRecursive(1);
-            Console.WriteLine(binaryTree.Highest());
-            Console.WriteLine(binaryTree.Smallest());
-            binaryTree.PostorderTraversal();
-            Console.WriteLine();
-            binaryTree.PreOrderTraversal();
-            Console.WriteLine();
-            binaryTree.InOrderTraversal();
+            //var binaryTree = new BinaryTree(3);
+            //binaryTree.AddRecursive(4);
+            //binaryTree.AddRecursive(2);
+            //binaryTree.AddRecursive(5);
+            //binaryTree.AddRecursive(1);
+            //Console.WriteLine(binaryTree.Highest());
+            //Console.WriteLine(binaryTree.Smallest());
+            //binaryTree.PostorderTraversal();
+            //Console.WriteLine();
+            //binaryTree.PreOrderTraversal();
+            //Console.WriteLine();
+            //binaryTree.InOrderTraversal();
+
+            var dequeueeuueue = new Structures.SpecialLists.A.Dequeue<int>();
+            dequeueeuueue.Push(3);
+            Console.WriteLine(dequeueeuueue.Pop());
         }
 
     }

@@ -1,9 +1,56 @@
 ﻿using Structures.Interfaces.Simple;
 using Structures.Interfaces.SpecialLists;
+using Structures.Lists;
 using Structures.Nodes;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
+namespace Structures.SpecialLists.A
+{
+    public class Dequeue<T> : IDequeue<T>
+    {
+        private SingleLinkList<T> _list;
+
+        public Dequeue()
+        {
+            _list = new SingleLinkList<T>();
+        }
+
+        public bool IsEmpty => throw new NotImplementedException();
+
+        public T PeekFirst()
+        {
+            throw new NotImplementedException();
+        }
+
+        public T PeekLast()
+        {
+            throw new NotImplementedException();
+        }
+
+        public T Pop()
+        {
+            return _list.RemoveLast();
+        }
+
+        public void Push(T item)
+        {
+            _list.AddLast(item);
+        }
+
+        public void Shift(T item)
+        {
+            _list.AddFirst(item);
+        }
+
+        public T Unshift()
+        {
+            return _list.RemoveFirst();
+        }
+    }
+}
+
 
 namespace Structures.SpecialLists
 {
